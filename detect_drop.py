@@ -28,8 +28,8 @@ if __name__ == "__main__":
   bg_subtractor = cv2.createBackgroundSubtractorMOG2()
 
   while True:
-      ret,img = cam.read()
 
+      ret,img = cam.read()
       image = img.copy()
 
       #图片预处理
@@ -66,7 +66,6 @@ if __name__ == "__main__":
               #cv2.drawContours(image,[c],-1,(255,0,0),1)
               cv2.rectangle(image,(x,y),(x + w,y + h),(0,255,0),1)
               #image = cv2.fillPoly(image,[c],(255,255,255))
-
 
       #if scale > 0 and scale <1:
       #    img = cv2ImgAddText(img,"walking",10,20,(250,0,0),30)
